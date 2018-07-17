@@ -66,13 +66,15 @@ namespace Lab2
             double Parimeter = 2 * length + 2 * width;
             //Console.WriteLine(Parimeter);
             double Volume = length * width * height;
-           // Console.WriteLine(Volume);
-
+            // Console.WriteLine(Volume);
+            int Area2 = Convert.ToInt32(Math.Floor(Area));
+            int Parimeter2 = Convert.ToInt32(Math.Floor(Parimeter));
+            int Volume2 = Convert.ToInt32(Math.Floor(Volume));
             //Output
 
-            Console.WriteLine($"Area: {Area - Area / 12}Feet, {Area%12*12}Inches.");
-            Console.WriteLine($"Perimeter: {Parimeter - Parimeter / 12}Feet, {Parimeter%12*12}Inches.");
-            Console.WriteLine($"Volume: {Volume - Volume / 12}Feet, {Volume%12*12}Inches.");
+            Console.WriteLine($"Area: {Area - (Area2-Area)*-1}Feet, {(Area-Area2)*12}Inches.");
+            Console.WriteLine($"Perimeter: {Parimeter - (Parimeter2-Parimeter)*-1}Feet, {(Parimeter-Parimeter2)*12}Inches.");
+            Console.WriteLine($"Volume: {Volume - (Volume2-Volume)*-1}Feet, {(Volume-Volume2)*12}Inches.");
             contin();
         }
 
